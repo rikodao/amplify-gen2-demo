@@ -62,7 +62,7 @@ const Body: React.FC = () => {
 
   return (
     <div style={containerStyles}>
-      <Authenticator>
+      <Authenticator hideSignUp>
         {({ signOut, user }) => (
           <p style={textStyles}>
             {user?.username}
