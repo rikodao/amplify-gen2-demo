@@ -8,7 +8,7 @@ interface DefaultStorageManagerExampleProps {
   }
 
 export const DefaultStorageManagerExample = ({username,setPath}: DefaultStorageManagerExampleProps) => {
-    const path = `user/${username}`
+    const path = `user/${username}/`
     return (
         <StorageManager
             acceptedFileTypes= { ['text/*']}

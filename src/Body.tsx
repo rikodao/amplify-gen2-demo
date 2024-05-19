@@ -1,6 +1,6 @@
 // Body.tsx
 import React, { useState } from 'react';
-import { DefaultStorageManagerExample } from './upload.tsx';
+import { DefaultStorageManagerExample } from './Upload.tsx';
 import { Authenticator } from '@aws-amplify/ui-react';
 import { InvokeCommand, LambdaClient } from '@aws-sdk/client-lambda';
 import { fetchAuthSession } from 'aws-amplify/auth';
@@ -65,7 +65,8 @@ const Body: React.FC = () => {
       <Authenticator hideSignUp>
         {({ signOut, user }) => (
           <p style={textStyles}>
-            {user?.username}
+            ログインEmail: {user?.signInDetails?.loginId}
+            
             <DefaultStorageManagerExample username={user?.username} setPath={setPath} />
             <div style={textStyles}>{path}</div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
