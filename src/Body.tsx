@@ -6,7 +6,7 @@ import { InvokeCommand, LambdaClient } from '@aws-sdk/client-lambda';
 import { fetchAuthSession } from 'aws-amplify/auth';
 import outputs from "../amplify_outputs.json";
 
-const containerStyles = {
+const containerStyles : React.CSSProperties =  {
   width: '100%',
   maxWidth: '800px',
   backgroundColor: '#fff',
@@ -18,7 +18,7 @@ const containerStyles = {
   alignItems: 'center',
 };
 
-const buttonStyles = {
+const buttonStyles: React.CSSProperties =  {
   backgroundColor: '#ff6b00',
   color: '#fff',
   border: 'none',
@@ -26,13 +26,10 @@ const buttonStyles = {
   borderRadius: '4px',
   cursor: 'pointer',
   transition: 'background-color 0.3s ease',
-  '&:hover': {
-    backgroundColor: '#e05800',
-  },
   marginRight: '1rem',
 };
 
-const textStyles = {
+const textStyles : React.CSSProperties = {
   marginBottom: '1rem',
   fontSize: '1.2rem',
   textAlign: 'center',

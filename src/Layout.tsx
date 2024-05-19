@@ -1,7 +1,7 @@
 // Layout.tsx
 import React from 'react';
 
-const appStyles = {
+const appStyles: React.CSSProperties =  {
   backgroundColor: '#f8f8f8',
   color: '#333',
   fontFamily: 'Arial, sans-serif',
@@ -12,7 +12,7 @@ const appStyles = {
   width: '100%',
 };
 
-const headerStyles = {
+const headerStyles: React.CSSProperties = {
   backgroundColor: '#ff6b00',
   color: '#fff',
   padding: '1rem',
@@ -22,7 +22,7 @@ const headerStyles = {
   width: '100%',
 };
 
-const contentStyles = {
+const contentStyles: React.CSSProperties =  {
   flex: '1',
   width: '100%',
   display: 'flex',
@@ -30,7 +30,7 @@ const contentStyles = {
   alignItems: 'center',
 };
 
-const footerStyles = {
+const footerStyles: React.CSSProperties = {
   backgroundColor: '#333',
   color: '#fff',
   padding: '1rem',

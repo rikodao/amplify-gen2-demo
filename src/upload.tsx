@@ -1,9 +1,10 @@
 import { StorageManager } from '@aws-amplify/ui-react-storage';
 import '@aws-amplify/ui-react/styles.css';
 
+
 interface DefaultStorageManagerExampleProps {
-    username: string;
-    setPath: (path: string | undefined) => void;
+    username: string | undefined;
+    setPath: any;
   }
 
 export const DefaultStorageManagerExample = ({username,setPath}: DefaultStorageManagerExampleProps) => {
