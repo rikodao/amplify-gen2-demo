@@ -46,9 +46,9 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div style={appStyles}>
-      <header style={headerStyles}>My App</header>
+      <header style={headerStyles}>個人情報確認くん</header>
       <div style={contentStyles}>{children}</div>
-      <footer style={footerStyles}>© 2023 My App. All rights reserved.</footer>
+      <footer style={footerStyles}>© 2024 個人情報確認くん. All rights reserved.</footer>
     </div>
   );
 };
