@@ -72,7 +72,7 @@ const Body: React.FC = () => {
               <button style={buttonStyles} onClick={invokeSayHello}>個人情報が含まれるかチェックする</button>
               <button style={buttonStyles} onClick={signOut}>ログアウト</button>
             </div>
-            <div style={textStyles}>{text}</div>
+            <h4 style={textStyles}>{text}</h4>
           </p>
         )}
       </Authenticator>
