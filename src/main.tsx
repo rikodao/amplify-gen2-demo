@@ -7,7 +7,11 @@ import '@aws-amplify/ui-react/styles.css'
   
 import { Amplify } from 'aws-amplify'
 import outputs from '../amplify_outputs.json'
-  
+import { Buffer } from 'buffer';
+
+// @ts-ignore
+window.Buffer = Buffer;
+
 Amplify.configure(outputs)
 
 

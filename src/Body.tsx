@@ -40,6 +40,7 @@ const Body: React.FC = () => {
     const [path, setPath] = useState("");
 
     async function invokeSayHello() {
+        if(!path) return
         const { credentials } = await fetchAuthSession();
         const awsRegion = outputs.auth.aws_region;
         const functionName = outputs.custom.sayHelloFunctionName;
@@ -47,6 +48,7 @@ const Body: React.FC = () => {
         const labmda = new LambdaClient({ credentials: credentials, region: awsRegion });
         const command = new InvokeCommand({
             FunctionName: functionName,
+            Payload: Buffer.from(JSON.stringify({ key: path })),
         });
         const apiResponse = await labmda.send(command);
         console.log(apiResponse);
@@ -56,7 +58,7 @@ const Body: React.FC = () => {
             console.log(payloadStr);
 
             const payload = JSON.parse(payloadStr);
-            setText(payload.message);
+            setText(`${payload.message} : ${payload.hitRule}`);
         }
     }
 

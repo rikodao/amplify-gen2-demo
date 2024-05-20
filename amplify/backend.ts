@@ -10,6 +10,7 @@ const backend = defineBackend({
 const authenticatedUserIamRole = backend.auth.resources.authenticatedUserIamRole;
 backend.sayHello.resources.lambda.grantInvoke(authenticatedUserIamRole);
 
+
 backend.addOutput({
     custom: {
         sayHelloFunctionName: backend.sayHello.resources.lambda.functionName,
