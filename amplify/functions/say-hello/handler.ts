@@ -52,9 +52,10 @@ export const handler = async (event) => {
     try {
         const content = await getFileContent(event.key);
         // console.log(content);
+        // const message =  checkPersonalInformationByLLM(content)
         
         const hits = checkPersonalInformationByRule(content);
-        return { hitRule: JSON.stringify(hits) ,message: "生成AIの文言をここに入れてください。こちらがヒットしている可能性のある個人情報です。"};
+        return { hitRule: JSON.stringify(hits) ,message: "生成AIのmessageをここに入れてください。こちらがヒットしている可能性のある個人情報です。"};
 
     } catch (err) {
         console.error('Error processing file:', err);
