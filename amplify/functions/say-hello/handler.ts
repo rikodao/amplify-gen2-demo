@@ -54,7 +54,7 @@ export const handler = async (event) => {
         // console.log(content);
         
         const hits = checkPersonalInformationByRule(content);
-        return { hitRule: JSON.stringify(hits) ,message: "左記がヒットしている可能性のある個人情報です。生成AIの文言をここに入れてください。"};
+        return { hitRule: JSON.stringify(hits) ,message: "こちらがヒットしている可能性のある個人情報です。生成AIの文言をここに入れてください。"};
 
     } catch (err) {
         console.error('Error processing file:', err);
